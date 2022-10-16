@@ -30,7 +30,7 @@ public class GunController : MonoBehaviour
     void Update()
     {
         Aim();
-        Shoot();
+        GunShoot();
         if(Input.GetKeyDown(KeyCode.Space))
         {
             if(x == 0)
@@ -45,6 +45,12 @@ public class GunController : MonoBehaviour
                 x = 0;
             }
             sprite.sprite = images[x];
+        }
+    }
+
+    void GunShoot() {
+        if (x == 0) {
+            Shoot();
         }
     }
 
